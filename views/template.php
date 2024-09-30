@@ -42,19 +42,19 @@
 
 <?php 
 
+include "modulos/header.php";
+include "modulos/menu.php";
+
   if(isset($_GET["ruta"])){
 
     if($_GET["ruta"] == "usuarios"){
 
       include "modulos/". $_GET["ruta"] .".php";
     }
+  }else{
+    include "modulos/inicio/cajas.php";
   }
   
-
-
-  include "modulos/header.php";
-  include "modulos/menu.php";
-  include "modulos/inicio/cajas.php";
   include "modulos/footer.php";
 
 ?>
@@ -114,5 +114,8 @@
 <script src="views/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="views/dist/js/pages/dashboard.js"></script>
+
+<script src="views/js/plantilla.js"></script>
+
 </body>
 </html>
