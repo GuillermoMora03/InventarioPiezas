@@ -7,6 +7,12 @@
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="vistas/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="vistas/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="vistas/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="views/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -35,6 +41,17 @@
   </div>
 
 <?php 
+
+  if(isset($_GET["ruta"])){
+
+    if($_GET["ruta"] == "usuarios"){
+
+      include "modulos/". $_GET["ruta"] .".php";
+    }
+  }
+  
+
+
   include "modulos/header.php";
   include "modulos/menu.php";
   include "modulos/inicio/cajas.php";
@@ -57,6 +74,22 @@
 <script src="views/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="views/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- DataTables  & Plugins -->
+<script src="vistas/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="vistas/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="vistas/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="vistas/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="vistas/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="vistas/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="vistas/plugins/jszip/jszip.min.js"></script>
+<script src="vistas/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="vistas/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="vistas/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="vistas/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
 <!-- ChartJS -->
 <script src="views/plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
